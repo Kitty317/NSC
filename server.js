@@ -24,10 +24,10 @@ app.use(passport.session());
 app.use(express.static(__dirname + '/utility')); //deal with the css path here
 
 //view engine setup
-var engines = require('consolidate');
-app.engine('html', engines.hogan);//use the template hogan
+//var engines = require('consolidate');
+//app.engine('html', engines.hogan);//use the template hogan
 app.set('views', __dirname + '/views');
-app.set('view engine', 'html');
+app.set('view engine', 'jade');
 
 //passport config
 var Account = require('./models/account');
@@ -40,18 +40,15 @@ mongoose.connect('mongodb://twang13:wtwcs132@ds147520.mlab.com:47520/login');
 
 //direct to the home page
 app.get('/', function(request, response) {
-    response.render('index.html', {navRight: "Login"});
+    //response.render('index.html', {navRight: "Login"});
+    response.render('test2', {info: "helloooo"});
 });
 
 app.get('/accounts/login', function (request, response) {
-    response.render('login.html');
+    //response.render('login.html');
 });
 
-//plug the passport into this request
-//app.post('/accounts/login', passport.authenticate('local'), function (request, response) {
-//    res.redirect('/');
-//
-//});
+
 
 app.post('/accounts/register', function (request, response) {
    Account.register(new Account({username : request.body.username, email:request.body.email }), request.body.password, function(error, account) {
