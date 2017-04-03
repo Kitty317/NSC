@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Home</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <link rel="stylesheet" href="/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/bootstrap-3.3.7-dist/css/bootstrap-theme.min.css">
+    <script src="/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+    <script src="/js/index.js"></script>
+    <!--load google map API-->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDTZW-BFGz363xgOQ56pAyq4iCrCGlSiGc"></script>
+    <link rel="stylesheet" href="/css/index.css">
+</head>
+<body>
+<div>
+    <nav class="navbar navbar-inverse navbar-static-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbarCollapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">National Sobering Collaborative</a>
+            </div>
+
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="nav navbar-nav">
+                    <li class="active">
+                        <a href="/">Home</a>
+                    </li>
+                    <li>
+                        <a href="/about">About</a>
+                    </li>
+                    <li>
+                        <a href="/blog">Blog</a>
+                    </li>
+                    <li>
+                        <a href="/forum">Forum</a>
+                    </li>
+                    <li>
+                        <a href="/database">Database</a>
+                    </li>
+                    <li>
+                        <a href="/resources">Resources</a>
+                    </li>
+                </ul>
+                <ul class="navbar-form navbar-right">
+                    <a class="btn btn-info" href="/accounts/login"> {{navRight}} </a>
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+
+    <div class="jumbotron"  style="margin:20px 90px 20px; padding:15px 30px 15px;">
+        <p class="lead">National Sobering Collaborative (NSC) provides an alternative place where intoxicated citizen
+            (frequently homeless) are observed for safe sobering instead of jails, emergency departments or homeless shelters.</p>
+        <hr class="my-4">
+        <h3>Our sobering centers are across the country!</h3>
+        <div id="map"></div>
+
+    </div>
+
+</div>
+
+</body>
+</html>
